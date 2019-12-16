@@ -1,0 +1,154 @@
+/* ///////////////////////////////////// */
+/* ///////////    DEFAULT     ////////// */
+/* ///////////////////////////////////// */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    color: white;
+}
+div {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+/* ///////////////////////////////////// */
+/* ///////////     NAVBAR     ////////// */
+/* ///////////////////////////////////// */
+div.navBox {
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    margin-left: -50%;
+    padding-top: 26px;
+}
+a {
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    -moz-outline: 0;
+}
+nav {
+    overflow: hidden;
+    font-size: 0;
+    text-align: right;
+    padding: 0 30px 26px 0;
+}
+nav a {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    line-height: 36px;
+    margin: 0 10px;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0);
+    transition: ease .3s background-color, ease .3s border;
+}
+nav a:hover {
+    border: 1px solid #fff;
+    background-color: rgba(255,255,255,.1);
+}
+div.navBox .logo {
+    display: block;
+    float: left;
+    width: 230px;
+    height: 32px;
+    background: url(https://webinput.nie.netease.com/img/mumu/logo3.png) no-repeat;
+    font-size: 0;
+    text-indent: -9999px;
+    margin-left: 29px;
+}
+/* ///////////////////////////////////// */
+/* ///////////     SPLASH     ////////// */
+/* ///////////////////////////////////// */
+div.splash {
+    height: 1003px;
+    padding-top: 30px;
+    background: url(https://ssr.res.netease.com/pc/gw/20191118185336/img/kv_eb0182f.jpg) no-repeat center/cover;
+    text-align: center;
+}
+div.splash > div.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h1 {
+    font-size: 6rem;
+}
+div.center > div.socialMe {
+    font-size: 2rem;
+    
+}
+/* ///////////////////////////////////// */
+/* ///////////      MAIN      ////////// */
+/* ///////////////////////////////////// */
+div.section1 {
+    background: url(https://ssr.res.netease.com/pc/gw/20191118185336/img/p1_74b709c.jpg) no-repeat center/cover;
+    height: 761px;
+    padding-top: 100px;
+}
+div.section2 {
+    background: url(https://ssr.res.netease.com/pc/gw/20191118185336/img/p2_e23bb04.jpg) no-repeat center/cover;
+    height: 934px;
+    padding-top: 72px;
+}
+div.section3 {
+    background: url(https://ssr.res.netease.com/pc/gw/20191118185336/img/p3_b024615.jpg) no-repeat center/cover;
+    height: 703px;
+}
+div.section4 {
+    background: url(https://ssr.res.netease.com/pc/gw/20191118185336/img/p4_d89e24d.jpg) no-repeat center/cover;
+    height: 1410px;
+}
+/* ///////////////////////////////////// */
+/* ///////////     BUTTON     ////////// */
+/* ///////////////////////////////////// */
+a.button {
+    display: block;
+    position: relative;
+    margin: 10px auto;
+    width: 300px;
+    height: 68px;
+    overflow: hidden;
+    color: black;
+    line-height: 68px;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: azure;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0);
+    transition: ease .3s background-color, ease .3s border;
+}
+a.button:hover {
+    border: 1px solid #fff;
+    background-color: rgba(255,255,255,.1);
+}
+
+.image-mask {
+     background: linear-gradient(125deg,#23966c, #faaa54, #e23b4a, #db0768, #360670) no-repeat center/cover;
+     text-align: center;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;    
+     font: 900 10vw 'Open Sans', sans-serif;
+     z-index: 2;
+}
+.slogan {
+    position: absolute;
+    width: 1419px;
+    height: 284px;
+    top: -70px;
+    left: 50%;
+    transform: translate(-50%,0);
+    background: url(https://shirajuki.js.org/assets/img/solgan-tit.png) no-repeat;
+    z-index: 1;
+}
