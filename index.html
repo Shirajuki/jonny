@@ -22,6 +22,17 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav id="mb">
+      <a href="#">Home</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#about">about me</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <a id="hamburger" class="hamburger">☰</a>
+    <a id="hamburgerX" class="hamburger">❌</a>
+
+    <div id="navBoxMb"></div>
     <div class="wrapper">
         <div class="navBox">
             <a href="#" class="logo" title="jo9">jo9</a>
@@ -32,7 +43,6 @@
                 <a href="#about">about me</a>
                 <a href="#contact">contact</a>
             </nav>
-            <a href="#" class="hamburger">☰</a>
         </div>
         <!-- Splash Screen -->
         <div class="splash">
@@ -413,6 +423,39 @@
           document.getElementById("scrollUpBtn").style.opacity = 0;
           document.getElementById("scrollUpBtn").style.pointerEvents = "none";
       }
+    }
+    const hamburger = document.getElementById('hamburger');
+    const hamburgerX = document.getElementById('hamburgerX');
+    const mb = document.getElementById('mb');
+    const navBoxMb = document.getElementById('navBoxMb');
+    hamburger.addEventListener('click',function() {
+      this.style.pointerEvents = "none";
+      this.style.opacity = 0;
+      hamburgerX.style.pointerEvents = "all";
+      hamburgerX.style.opacity = 1;
+      setTimeout(_ => {
+        mb.style.pointerEvents = "all";
+        mb.style.opacity = 1;
+      },400);
+      navBoxMb.style.width = '200vh';
+      navBoxMb.style.height = '200vh';
+    });
+
+    hamburgerX.addEventListener('click',burgerClose);
+    for (const el of mb.children) {
+      el.addEventListener('click',burgerClose);
+    }
+    function burgerClose() {
+      hamburgerX.style.pointerEvents = "none";
+      hamburgerX.style.opacity = 0;
+      hamburger.style.pointerEvents = "all";
+      hamburger.style.opacity = 1;
+      mb.style.pointerEvents = "none";
+      mb.style.opacity = 0;
+      setTimeout(_ => {
+        navBoxMb.style.width = '0';
+        navBoxMb.style.height = '0';
+      },400);
     }
     </script>
 </body>

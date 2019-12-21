@@ -24,6 +24,7 @@ body {
   color: white;
   background-color: #2b292e;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 div {
   width: 100%;
@@ -80,13 +81,22 @@ div.navBox .logo {
   text-indent: -9999px;
   margin-left: 29px;
 }
+/* Hamburger-icon */
 a.hamburger {
   display: none;
-  position: absolute;
-  right: 20px;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
+}
+nav#mb {
+  display: none;
+}
+nav#mb a {
+  text-align: center;
+}
+div#navBoxMb {
+  display: none;
+}
+a#hamburgerX {
+  pointer-events: none;
+  opacity: 0;
 }
 /* ///////////////////////////////////// */
 /* ///////////     SPLASH     ////////// */
@@ -464,6 +474,47 @@ a.sc {
   }
   a.hamburger {
     display: block;
+    position: fixed;
+    right: 20px;
+    color: white;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 700;
+    background-color: #21232b;
+    border-radius: 50%;
+    border: 1px solid #1d1b27;
+    transform: translateY(10px);
+    transition: opacity .3s;
+    z-index: 999999;
+  }
+  nav#mb {
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    transition: opacity .7s ease;
+  }
+  div#navBoxMb {
+    display: block;
+    position: fixed;
+    background-color: black;
+    border-radius: 50%;
+    height: 0;
+    width: 0;
+    top: -50%;
+    right: -50%;
+    z-index: 6969;
+    transition: all 1s ease;
   }
   div.section0, div.section1, div.section2, div.section3, div.section4 {
     height: auto;
