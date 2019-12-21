@@ -75,7 +75,7 @@ div.navBox .logo {
   float: left;
   width: 230px;
   height: 32px;
-  background: url(https://webinput.nie.netease.com/img/mumu/logo3.png) no-repeat;
+  background: url("img/logo2.png") no-repeat;
   font-size: 0;
   text-indent: -9999px;
   margin-left: 29px;
@@ -170,7 +170,7 @@ div.section4::before {
   height: 100%;
   opacity: .4;
   z-index: -1;
-  background: url(https://ssr.res.netease.com/pc/gw/20191118185336/img/p4_d89e24d.jpg) no-repeat center/cover;
+  background: url("img/section4.jpg") no-repeat center/cover;
 }
 /* ///////////////////////////////////// */
 /* ///////////    PROJECTS    ////////// */
