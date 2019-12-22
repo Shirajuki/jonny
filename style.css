@@ -279,7 +279,7 @@ div.projectInfoWrapper > p.projectDesc {
 }
 div.imgWrapper > div.projectTags {
   position: relative;
-
+  padding-left: 35px;
 }
 div.skillWrapper {
   width: 90%;
