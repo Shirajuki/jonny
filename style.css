@@ -224,6 +224,30 @@ div.imgWrapper > img {
   width: 95%;
   border-radius: 10px;
 }
+div.imgPreview {
+  position: relative;
+  max-width: 320px;
+  height: 195px;
+  background-color: black;
+  background: url("img/preview2.png");
+  margin: 0 auto;
+}
+div.imgPreview > img.one {
+  position: absolute;
+  top: 21px;
+  left: 28px;
+  width: 189px;
+  height: 122px;
+  border: 3px solid black;
+}
+div.imgPreview > img.two {
+  position: absolute;
+  top: 98px;
+  right: 38px;
+  width: 44px;
+  height: 69px;
+  border: 2px solid black;
+}
 div.projectWrapper > div > div.iconWrapper {
   position: absolute;
   left: 0;
@@ -323,6 +347,7 @@ div.projectSmallContainer div.projectInfoWrapper {
 div.projectSmallContainer div.projectInfoWrapper > p.projectTitle {
   font-size: 1.2rem;
   width: 100%;
+  height: 45px;
 }
 div.projectSmallContainer div.projectInfoWrapper > div.iconWrapper {
   text-align: right;
@@ -460,7 +485,7 @@ a.sc {
 /* ///////////////////////////////////// */
 /* ///////////     MOBILE     ////////// */
 /* ///////////////////////////////////// */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   div.projectSmallContainer {
     grid-template-columns: 1fr 1fr;
   }
@@ -531,13 +556,13 @@ a.sc {
   }
   div > div.imgWrapper {
     order: 1;
+    left: 0;
     text-align: center;
     position: relative;
     background-color: rgb(35, 35, 35);
     padding-top: 15px;
     border-radius: 10px 10px 0 0;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
-    left: 0;
   }
   div > div.imgWrapper > div.iconWrapper {
     bottom: -15px;
