@@ -180,7 +180,7 @@ div.section4::before {
   height: 100%;
   opacity: .4;
   z-index: -1;
-  background: url("img/section4.jpg") no-repeat center/cover;
+  background: url("img/section4.webp") no-repeat center/cover;
 }
 /* ///////////////////////////////////// */
 /* ///////////    PROJECTS    ////////// */
@@ -417,16 +417,6 @@ div.image-mask {
   /* -webkit-text-fill-color: transparent; */
   font: 900 10vw 'Lilita One', cursive;
   z-index: 2;
-}
-.slogan {
-  position: absolute;
-  width: 1419px;
-  height: 284px;
-  top: -70px;
-  left: 50%;
-  transform: translate(-50%,0);
-  background: url(https://shirajuki.js.org/assets/img/solgan-tit.png) no-repeat;
-  z-index: 1;
 }
 /* ///////////////////////////////////// */
 /* ///////////      ICON      ////////// */
