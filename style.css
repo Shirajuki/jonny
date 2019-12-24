@@ -431,7 +431,7 @@ div.image-mask {
 /* ///////////////////////////////////// */
 /* ///////////      ICON      ////////// */
 /* ///////////////////////////////////// */
-a.hiddenAnchor {
+span.hiddenAnchor {
   position: absolute;
   top: -80px;
 }
@@ -534,10 +534,13 @@ a.sc {
     position: fixed;
     background-color: black;
     border-radius: 50%;
-    height: 0;
-    width: 0;
-    top: -50%;
-    right: -50%;
+    /* height: 0; */
+    /* width: 0; */
+    height: 200vh;
+    width: 200vw;
+    top: -100%;
+    right: -100%;
+    transform: scale(0);
     z-index: 6969;
     transition: all 1s ease;
   }
@@ -586,5 +589,8 @@ a.sc {
   }
   div.projectSmallContainer {
     grid-template-columns: 1fr;
+  }
+  div.imgWrapper > div.projectTags {
+    padding-left: 0;
   }
 }
