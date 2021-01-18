@@ -471,6 +471,9 @@ div.projectSmallContainer {
 	grid-gap: 40px;
 	flex-direction: row;
 }
+div.projectSmallContainer > div.projectWrapper {
+	box-shadow: var(--nav-shadow);
+}
 div.projectSmallContainer > div.projectWrapper > div {
 	display: flex;
 	flex-direction: column;
