@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background: #0e0a25;
+  --primary: rgba(0, 0, 255, 0.5);
+  --secondary: rgb(251, 152, 198);
+}
+
+html,
+body {
+  font-family: "Be Vietnam", sans-serif;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -5,4 +21,103 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 95%;
+    height: 50px;
+    a:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+}
+
+/* MAIN */
+main {
+  min-height: calc(100vh - 60px);
+}
+div.socialBtn {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  background-color: var(--secondary);
+  margin: 0 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SECTION */
+section {
+  min-height: 200px;
+  background-color: var(--background);
+}
+
+/* HERO */
+section.hero {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  background-color: var(--primary);
+  justify-content: center;
+  align-items: center;
+  div.heroIntro {
+    position: relative;
+    font-family: "Indie Flower", cursive;
+    font-size: 32px;
+    z-index: 1;
+    width: 100%;
+    padding: 0 11vw 0;
+    color: #fff;
+    h1 {
+      font-family: "Be Vietnam", sans-serif;
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+  }
+  div.heroSocials {
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    right: 20px;
+    justify-content: space-between;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    transform: skewX(-20deg) translateX(-80%);
+    background: var(--secondary);
+    width: 100%;
+    height: 100%;
+  }
+}
+/* SKILLS */
+
+/* PROJECTS */
+
+/* ABOUT ME */
+
+/* CONTACT */
+
+/* FOOTER */
+footer {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
 }
