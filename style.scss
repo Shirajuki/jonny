@@ -5,13 +5,16 @@
 }
 :root {
   --background: #0e0a25;
-  --primary: rgba(0, 0, 255, 0.5);
+  --primary: #543dcb;
+  // --primary: rgb(127, 127, 255);
   --secondary: rgb(251, 152, 198);
+  --title-text: #cfc2e8;
 }
 
 html,
 body {
   font-family: "Be Vietnam", sans-serif;
+  background: var(--background);
 }
 
 #app {
@@ -36,9 +39,21 @@ header {
     justify-content: flex-end;
     align-items: center;
     width: 95%;
-    height: 50px;
+    height: 60px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
     a:not(:last-of-type) {
-      margin-right: 20px;
+      margin-right: 40px;
+    }
+    a:last-of-type {
+      font-weight: 700;
+      padding: 10px 24px;
+      background-color: var(--primary);
     }
   }
 }
@@ -46,21 +61,56 @@ header {
 /* MAIN */
 main {
   min-height: calc(100vh - 60px);
+  background-color: var(--background);
+  h1,
+  h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  h2 {
+    position: relative;
+    font-size: 2rem;
+    padding: 20px;
+    z-index: 1;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 20px;
+      background-color: var(--primary);
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+  h3,
+  h4 {
+    letter-spacing: 5px;
+    color: var(--title-text);
+  }
 }
+
 div.socialBtn {
   display: flex;
   width: 45px;
   height: 45px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   margin: 0 10px;
   justify-content: center;
   align-items: center;
 }
 
 /* SECTION */
-section {
+section:not(.hero) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
   min-height: 200px;
-  background-color: var(--background);
+  margin: 0 auto;
+  padding: 50px;
 }
 
 /* HERO */
@@ -68,13 +118,13 @@ section.hero {
   position: relative;
   display: flex;
   height: 100vh;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   justify-content: center;
   align-items: center;
   div.heroIntro {
     position: relative;
     font-family: "Indie Flower", cursive;
-    font-size: 32px;
+    font-size: 36px;
     z-index: 1;
     width: 100%;
     padding: 0 11vw 0;
@@ -86,6 +136,14 @@ section.hero {
       line-height: 1.2;
       text-transform: uppercase;
       letter-spacing: 4px;
+      padding-left: 10px;
+    }
+    p:first-of-type {
+      transform: translateY(10px);
+    }
+    p:last-of-type {
+      padding-top: 10px;
+      padding-left: 30px;
     }
   }
   div.heroSocials {
@@ -99,13 +157,39 @@ section.hero {
     content: "";
     position: absolute;
     transform: skewX(-20deg) translateX(-80%);
-    background: var(--secondary);
+    background: var(--primary);
     width: 100%;
     height: 100%;
   }
 }
 /* SKILLS */
-
+section.mySkills {
+  div.bigicon {
+    display: inline-block;
+    cursor: default;
+    width: 64px;
+    height: 64px;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 5px 1px;
+    transition: filter 0.2s;
+  }
+  h3 {
+    display: block;
+    width: calc(6 * 90px);
+    max-width: 80%;
+    text-align: left;
+  }
+  div.skillWrapper {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 90px);
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 45px;
+  }
+}
 /* PROJECTS */
 
 /* ABOUT ME */
@@ -114,10 +198,23 @@ section.hero {
 
 /* FOOTER */
 footer {
+  position: relative;
   display: flex;
   width: 100%;
   height: 60px;
+  margin-top: 100px;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  background-color: var(--background);
+  z-index: 1;
+  canvas#wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    opacity: 0.8;
+    z-index: -1;
+  }
 }
