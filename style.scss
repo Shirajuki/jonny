@@ -107,12 +107,24 @@ span.hiddenAnchor {
 }
 div.socialBtn {
   display: flex;
-  width: 45px;
-  height: 45px;
-  background-color: var(--primary);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
   margin: 0 10px;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+  a {
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  &:hover {
+    z-index: 1;
+    transform: scale(1.1);
+  }
 }
 div.iconWrapper {
   display: flex;
@@ -432,7 +444,7 @@ section.otherProjects {
 section.contact {
   div.socials {
     display: flex;
-    margin-top: 20px;
+    margin-top: 30px;
     div.socialBtn:first-of-type {
       margin-left: 0;
     }
