@@ -14,9 +14,11 @@
 
 html,
 body {
+  position: relative;
   font-family: "Be Vietnam", sans-serif;
   background: var(--background);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #app {
@@ -27,7 +29,20 @@ body {
   color: #2c3e50;
   margin-top: 60px;
 }
-
+.in-view {
+  &:not(.reverse) {
+    animation-name: fadeInRight;
+  }
+  &.reverse {
+    animation-name: fadeInLeft;
+  }
+  &:not(.project) {
+    animation-name: fadeInLeft;
+  }
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+  animation-fill-mode: both;
+}
 /* HEADER */
 header {
   position: fixed;
@@ -200,6 +215,10 @@ section:not(.hero) {
     }
   }
 }
+section:not(.in-view):not(.hero):not(.contact):not(.projects),
+div.project:not(.in-view) {
+  opacity: 0 !important;
+}
 
 /* HERO */
 section.hero {
@@ -209,8 +228,12 @@ section.hero {
   background-color: var(--secondary);
   background: url("./assets/bg.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: center;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
   div.heroIntro {
     position: relative;
     font-family: "Indie Flower", cursive;
@@ -366,7 +389,7 @@ section.projects {
         z-index: 1;
         div.shape {
           left: -10px;
-          clip-path: polygon(0 0, 61.5% 0, 100% 100%, 38.5% 100%);
+          clip-path: polygon(0 0, 62.7% 0, 100% 100%, 37.2% 100%);
         }
         div.desktop {
           bottom: 110px;
@@ -484,5 +507,26 @@ footer {
     width: 100%;
     opacity: 0.8;
     z-index: -1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(20%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-20%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }

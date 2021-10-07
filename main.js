@@ -1,61 +1,52 @@
 import "./style.scss";
+import _canvas from "./canvas.js";
+import lax from "lax.js";
+import luxy from "luxy.js";
+import inView from "in-view";
 /*
 document.querySelector("#app").innerHTML = `
   <h1>Hello Vite!</h1>
   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 `;
 */
-const canvas = document.getElementById("wave");
-if (canvas) {
-  const ctx = canvas.getContext("2d");
-  const HEIGHT = canvas.height,
-    WIDTH = canvas.width;
-  const waves = [
-    {
-      x: Math.floor(Math.random() * 1000),
-      dx: 1,
-      y: 1,
-      color: "rgba(133, 110, 255,0.4)",
-    },
-    {
-      x: Math.floor(Math.random() * 1000),
-      dx: 0.5,
-      y: 1,
-      color: "rgba(55, 37, 145,0.6)",
-    },
-    {
-      x: Math.floor(Math.random() * 1000),
-      dx: 0.1,
-      y: 1,
-      color: "rgba(108, 83, 233,1)",
-    },
-  ];
-  const drawWave = (ctx, xo, yo, fs) => {
-    let x = 0,
-      y = 0,
-      a = 17,
-      f = 45;
-    ctx.beginPath();
-    ctx.lineWidth = 1;
-    ctx.fillStyle = fs;
-    while (x < WIDTH + 10) {
-      y = HEIGHT / 2 - yo * 2 + a * Math.sin((x + xo) / f);
-      ctx.lineTo(x, y);
-      x += 100;
-    }
-    ctx.lineTo(x, 200);
-    ctx.lineTo(0, 200);
-    ctx.fill();
-  };
-  const draw = () => {
-    ctx.clearRect(0, 0, WIDTH, HEIGHT), ctx.save(), ctx.translate(0, 15);
-    for (let l = waves.length - 1, i = l; i >= 0; i--) {
-      const wave = waves[i];
-      drawWave(ctx, wave.x, wave.y, wave.color);
-      wave.x += wave.dx;
-    }
-    ctx.restore();
-    window.requestAnimationFrame(draw);
-  };
-  draw();
-}
+lax.init();
+
+// Add a driver that we use to control our animations
+lax.addDriver("scrollY", function () {
+  return window.scrollY;
+});
+
+// Add animation bindings to elements
+lax.addElements(".shape", {
+  scrollY: {
+    translateY: [
+      ["elInY", "elCenterY", "elOutY"],
+      [-50, 0, 50],
+    ],
+  },
+});
+lax.addElements(".desktop", {
+  scrollY: {
+    translateY: [
+      ["elInY", "elCenterY", "elOutY"],
+      [-100, 0, 100],
+    ],
+  },
+});
+lax.addElements(".mobile", {
+  scrollY: {
+    translateY: [
+      ["elInY", "elCenterY", "elOutY"],
+      [-80, 0, 80],
+    ],
+  },
+});
+
+inView(".inview-js")
+  .on("enter", function (el) {
+    el.classList.add("in-view");
+  })
+  .check();
+inView.offset(window.innerHeight / 8);
+
+// luxy.init();
