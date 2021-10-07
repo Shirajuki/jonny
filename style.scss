@@ -126,10 +126,12 @@ div.socialBtn {
     transform: scale(1.1);
   }
 }
+
 div.iconWrapper {
   display: flex;
   grid-gap: initial;
   a.icon {
+    position: relative;
     display: flex;
     width: 35px;
     height: 35px;
@@ -137,8 +139,16 @@ div.iconWrapper {
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+    box-shadow: 0 8px 20px 0 rgb(33 69 89 / 10%);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    cursor: pointer;
     &:last-of-type {
       margin-right: 0;
+    }
+    img {
+      width: 70%;
+      height: 70%;
     }
   }
 }
@@ -197,6 +207,8 @@ section.hero {
   display: flex;
   height: 100vh;
   background-color: var(--secondary);
+  background: url("./assets/bg.png");
+  background-size: cover;
   justify-content: center;
   align-items: center;
   div.heroIntro {
@@ -411,7 +423,7 @@ section.otherProjects {
         background-color: #cfc2e8;
         min-height: 180px;
       }
-      img {
+      & > div > img {
         position: absolute;
         top: 0;
         left: 0;
