@@ -1,6 +1,7 @@
 {
   "name": "jonny",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "homepage": "https://Shirajuki.github.io/jonny",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
