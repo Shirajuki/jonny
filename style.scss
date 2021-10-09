@@ -308,6 +308,7 @@ section.hero {
     background: #2c3e50;
     width: 100%;
     height: 200%;
+    z-index: 1000;
     pointer-events: none;
     animation-name: fade;
     animation-direction: reverse;
@@ -315,14 +316,6 @@ section.hero {
     animation-duration: 0.8s;
     animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
     animation-fill-mode: both;
-  }
-}
-@keyframes slideInRight {
-  0% {
-    transform: skewX(-20deg) translateX(100%);
-  }
-  100% {
-    transform: skewX(-20deg) translateX(-65%);
   }
 }
 
@@ -473,6 +466,7 @@ section.projects {
 
 /* ABOUT ME */
 section.aboutMe {
+  min-height: 200px;
 }
 
 /* OTHER PROJECTS */
@@ -609,5 +603,13 @@ footer {
   100% {
     opacity: 1;
     transform: none;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: skewX(-20deg) translateX(100%);
+  }
+  100% {
+    transform: skewX(-20deg) translateX(-65%);
   }
 }
