@@ -1,3 +1,3 @@
-# Jonny's project portfolio
+# Jonny Ngo Luong's web portfolio
 
-A static WIP portfolio. Made using HTML5, CSS and javascript. Will be posting future projects here.
+This repository hosts my portfolio built using Vite + vanillaJS.

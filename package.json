@@ -1,0 +1,19 @@
+{
+  "name": "jonny",
+  "version": "0.0.1",
+  "homepage": "https://Shirajuki.github.io/jonny",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.42.1",
+    "vite": "^2.5.4"
+  },
+  "dependencies": {
+    "in-view": "^0.6.1",
+    "lax.js": "^2.0.3",
+    "luxy.js": "^0.1.0"
+  }
+}
