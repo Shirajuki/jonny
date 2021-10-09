@@ -51,6 +51,11 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
+  animation-name: fadeInDown;
+  animation-delay: 2s;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+  animation-fill-mode: both;
   nav {
     display: flex;
     justify-content: flex-end;
@@ -156,10 +161,14 @@ div.iconWrapper {
     margin-right: 10px;
     box-shadow: 0 8px 20px 0 rgb(33 69 89 / 10%);
     border-radius: 5px;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     cursor: pointer;
     &:last-of-type {
       margin-right: 0;
+    }
+    &:hover {
+      z-index: 1;
+      transform: scale(1.1);
     }
     img {
       width: 70%;
@@ -242,6 +251,13 @@ section.hero {
     width: 100%;
     padding: 0 11vw 0;
     color: #fff;
+    h1,
+    p {
+      animation-name: fadeInDown;
+      animation-duration: 0.8s;
+      animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+      animation-fill-mode: both;
+    }
     h1 {
       font-family: "Be Vietnam", sans-serif;
       font-size: 64px;
@@ -250,13 +266,16 @@ section.hero {
       text-transform: uppercase;
       letter-spacing: 4px;
       padding-left: 10px;
+      animation-delay: 2s;
     }
     p:first-of-type {
       transform: translateY(10px);
+      animation-delay: 1.8s;
     }
     p:last-of-type {
       padding-top: 10px;
       padding-left: 30px;
+      animation-delay: 2.2s;
     }
   }
   div.heroSocials {
@@ -266,13 +285,43 @@ section.hero {
     right: 20px;
     justify-content: space-between;
   }
+  div.socialBtn:first-of-type img {
+    filter: invert(1);
+  }
   &::before {
     content: "";
     position: absolute;
-    transform: skewX(-20deg) translateX(-80%);
+    transform: skewX(-20deg) translateX(100%);
     background: var(--primary);
+    width: 200%;
+    height: 100%;
+    animation-name: slideInRight;
+    animation-delay: 1s;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+    animation-fill-mode: both;
+    z-index: 1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: #2c3e50;
     width: 100%;
     height: 100%;
+    animation-name: fade;
+    animation-direction: reverse;
+    animation-delay: 0.8s;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+    animation-fill-mode: both;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: skewX(-20deg) translateX(100%);
+  }
+  100% {
+    transform: skewX(-20deg) translateX(-65%);
   }
 }
 
@@ -337,6 +386,13 @@ section.projects {
           background-color: #fff;
           border-radius: 5px;
           bottom: 110px;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
         }
         div.desktop {
           width: 290px;
@@ -485,6 +541,9 @@ section.contact {
     margin-top: 30px;
     div.socialBtn:first-of-type {
       margin-left: 0;
+      img {
+        filter: invert(1);
+      }
     }
   }
 }
@@ -527,6 +586,24 @@ footer {
   0% {
     opacity: 0;
     transform: translate3d(-10%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0);
   }
   100% {
     opacity: 1;
