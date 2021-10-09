@@ -308,6 +308,7 @@ section.hero {
     background: #2c3e50;
     width: 100%;
     height: 200%;
+    pointer-events: none;
     animation-name: fade;
     animation-direction: reverse;
     animation-delay: 0.8s;
