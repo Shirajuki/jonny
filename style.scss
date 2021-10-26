@@ -19,6 +19,7 @@ body {
   background: var(--background);
   scroll-behavior: smooth;
   overflow-x: hidden;
+  display: initial !important;
 }
 
 #app {
@@ -51,6 +52,7 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
+  transition: background 1s;
   animation-name: fadeInDown;
   animation-delay: 2s;
   animation-duration: 0.8s;
@@ -87,7 +89,7 @@ main {
   counter-reset: section;
   p {
     color: var(--text);
-    letter-spacing: 0.25px;
+    letter-spacing: 1px;
   }
   h1,
   h2 {
@@ -269,12 +271,12 @@ section.hero {
       animation-delay: 2s;
     }
     p:first-of-type {
-      transform: translateY(10px);
+      margin-bottom: -10px;
       animation-delay: 1.8s;
     }
     p:last-of-type {
-      padding-top: 10px;
-      padding-left: 30px;
+      padding-top: 15px;
+      padding-left: 40px;
       animation-delay: 2.2s;
     }
   }
@@ -321,6 +323,7 @@ section.hero {
 
 /* SKILLS */
 section.mySkills {
+  animation-name: fadeInDown !important;
   div.bigicon {
     display: inline-block;
     cursor: default;
@@ -373,6 +376,10 @@ section.projects {
           height: 400px;
           background: #523fce;
           clip-path: polygon(37.2% 0, 100% 0, 62.7% 100%, 0 100%);
+          transition-duration: 0.2s;
+          transition: opacity 0.3s,
+            clip-path 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+            -webkit-clip-path 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
         div.desktop,
         div.mobile {

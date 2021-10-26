@@ -2,18 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>Jonny Ngo Luong</title>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta name="description" content="Jonny Ngo Luong - Fullstack web developer who loves javascript frameworks and modern web technologies." />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#523fce">
+
+    <!-- *** common *** -->
+    <meta property="og:type" content="https://jonny.js.org/assets/bg.png">
+    <meta property="og:url" content="https://jonny.js.org/">
+    <meta property="og:title" content="Jonny Ngo Luong - Full stack web designer">
+    <meta property="og:site_name" content="Jonny Ngo Luong">
+    <meta property="og:description" content="Jonny Ngo Luong - Fullstack web developer who loves javascript frameworks and modern web technologies.">
+    <meta property="og:image" content="https://jonny.js.org/assets/bg.png">
+    <meta property="og:locale" content="nb_NO">
+    <!-- *** Twitter *** -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- *** stylesheet *** -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&family=Indie+Flower&display=swap"
       rel="stylesheet"
     />
+    <style rel="preload">
+      body {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav>
         <a href="#">Home</a>
         <a href="#projects">Projects</a>
@@ -94,7 +120,7 @@
               <stop stop-color="#B8B8B8" stop-opacity=".498" offset="0"/>
               <stop stop-color="#7F7F7F" stop-opacity="0" offset="1"/>
               </radialGradient>
-              <path d="m97.309 119.6c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z" enable-background="new" fill="url(#d)" opacity=".444"/>
+              <path d="m97.309 119.6c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z" fill="url(#d)" opacity=".444"/>
             </svg>
           </div>
           <div class="bigicon">
@@ -501,9 +527,6 @@
                 href="https://tkd.no/"
               >
               <img src="./assets/web.svg" alt="website link image"/>
-              </a>
-              <a class="icon" aria-label="Github Preview" target="_blank">
-                <img src="./assets/github.svg" alt="github link image"/>
               </a>
             </div>
           </div>

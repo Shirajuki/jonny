@@ -17,8 +17,8 @@ https://jonny.js.org
 This repository is currently WIP, things that needs to be worked on are:
 
 - [ ] Responsive design
-- [ ] Add favicon
-- [ ] Add animation effect on hero section
+- [x] Add favicon
+- [x] Add animation effect on hero section
 - [ ] Properly size images, served in correct formats
 - [ ] Take better screenshots/images
 - [ ] Fix SEO

@@ -9,6 +9,20 @@ document.querySelector("#app").innerHTML = `
   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 `;
 */
+// Scroll animation on navbar'
+document.addEventListener("scroll", () => {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    document.getElementById("header").style.backgroundColor =
+      "rgba(0, 0, 0, 0.2)";
+  } else {
+    document.getElementById("header").style.backgroundColor =
+      "rgba(0, 0, 0, 0)";
+  }
+});
+
 lax.init();
 
 // Add a driver that we use to control our animations
@@ -49,4 +63,4 @@ inView(".inview-js")
   .check();
 inView.offset(window.innerHeight / 8);
 
-// luxy.init();
+//luxy.init();
