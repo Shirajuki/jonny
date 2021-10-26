@@ -21,5 +21,5 @@ This repository is currently WIP, things that needs to be worked on are:
 - [x] Add animation effect on hero section
 - [ ] Properly size images, served in correct formats
 - [ ] Take better screenshots/images
-- [ ] Fix SEO
+- [x] Fix SEO
 - [ ] Fix caching through service worker + PWA

@@ -1,14 +1,9 @@
 import "./style.scss";
 import _canvas from "./canvas.js";
 import lax from "lax.js";
-import luxy from "luxy.js";
+// import luxy from "luxy.js";
 import inView from "in-view";
-/*
-document.querySelector("#app").innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
-*/
+
 // Scroll animation on navbar'
 document.addEventListener("scroll", () => {
   if (
