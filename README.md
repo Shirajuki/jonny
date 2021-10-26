@@ -22,4 +22,4 @@ This repository is currently WIP, things that needs to be worked on are:
 - [ ] Properly size images, served in correct formats
 - [ ] Take better screenshots/images
 - [x] Fix SEO
-- [ ] Fix caching through service worker + PWA
+- [x] Fix caching through service worker + PWA
