@@ -4,6 +4,11 @@ import lax from "lax.js";
 // import luxy from "luxy.js";
 import inView from "in-view";
 
+document.getElementById("burger").addEventListener("click", function () {
+  this.classList.toggle("toggled");
+  console.log("123");
+});
+
 // Scroll animation on navbar'
 document.addEventListener("scroll", () => {
   if (
@@ -50,6 +55,18 @@ lax.addElements(".mobile", {
     ],
   },
 });
+// lax.addElements(".hero", {
+//   scrollY: {
+//     translateY: [
+//       ["elInY", "elCenterY", "elOutY"],
+//       [0, 0, 300],
+//       {
+//         inertia: 10,
+//         easing: "easeOutQuad",
+//       },
+//     ],
+//   },
+// });
 
 inView(".inview-js")
   .on("enter", function (el) {
