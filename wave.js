@@ -41,15 +41,14 @@ if (canvas) {
     ctx.fill();
   };
   const draw = () => {
-    ctx.clearRect(0, 0, WIDTH, HEIGHT), ctx.save(), ctx.translate(0, 15);
+    ctx.clearRect(0, 0, WIDTH, HEIGHT);
     for (let l = waves.length - 1, i = l; i >= 0; i--) {
       const wave = waves[i];
       drawWave(ctx, wave.x, wave.y, wave.color);
       wave.x += wave.dx;
     }
-    ctx.restore();
     window.requestAnimationFrame(draw);
   };
-  draw();
+  window.requestAnimationFrame(draw);
 }
 export default {};

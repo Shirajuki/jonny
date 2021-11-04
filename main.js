@@ -1,5 +1,6 @@
 import "./style.scss";
-import _canvas from "./canvas.js";
+import _wave from "./wave.js";
+import _ember from "./ember.js";
 import lax from "lax.js";
 // import luxy from "luxy.js";
 import inView from "in-view";
