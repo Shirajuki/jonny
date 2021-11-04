@@ -19,6 +19,7 @@ This repository is currently WIP, things that needs to be worked on are:
 - [x] Responsive design
 - [x] Add favicon
 - [x] Add animation effect on hero section
+- [ ] Add hero ember particle effect animation
 - [ ] Properly size images/videos, served in correct formats (webm instead of gifs)
 - [ ] Take better screenshots/images
 - [x] Fix SEO
