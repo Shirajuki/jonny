@@ -7,7 +7,10 @@ import Projects from "../layouts/Home/Projects";
 ---
 
 <Layout title="Jonny Ngo Luong">
-  <main id="home" class="p-0 sm:p-4">
+  <main
+    id="home"
+    class="w-full sm:w-[calc(100%-2rem)] overflow-x-hidden sm:overflow-x-visible"
+  >
     <Hero client:visible />
     <BentoGrid client:visible />
     <Experience client:visible />
