@@ -1,13 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../layouts/Home/Hero';
-import BentoGrid from '../layouts/Home/BentoGrid';
-import Experience from '../layouts/Home/Experience';
-import Projects from '../layouts/Home/Projects';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../layouts/Home/Hero";
+import BentoGrid from "../layouts/Home/BentoGrid";
+import Experience from "../layouts/Home/Experience";
+import Projects from "../layouts/Home/Projects";
 ---
 
 <Layout title="Jonny Ngo Luong">
-  <main id="home">
+  <main id="home" class="p-0 sm:p-4">
     <Hero client:visible />
     <BentoGrid client:visible />
     <Experience client:visible />

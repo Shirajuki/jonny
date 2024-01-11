@@ -1,8 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-const findFirstParentArticle = (element: HTMLElement | null): HTMLElement | null => {
-  if (element?.tagName === 'BODY' || element === null) return null;
-  if (element?.tagName === 'ARTICLE') return element;
+const findFirstParentArticle = (
+  element: HTMLElement | null
+): HTMLElement | null => {
+  if (element?.tagName === "BODY" || element === null) return null;
+  if (element?.tagName === "ARTICLE") return element;
   return findFirstParentArticle(element.parentElement || null);
 };
 
@@ -20,24 +22,25 @@ const Spotlight = () => {
       const rect = article.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      article.style.setProperty('--x', x + 'px');
-      article.style.setProperty('--y', y + 'px');
+      article.style.setProperty("--x", x + "px");
+      article.style.setProperty("--y", y + "px");
       if (x > rect.width - rect.width / 4) {
-        article.style.setProperty('--rotate', '5deg');
+        article.style.setProperty("--rotate", "5deg");
       } else if (x < rect.width / 4) {
-        article.style.setProperty('--rotate', '-5deg');
+        article.style.setProperty("--rotate", "-5deg");
       } else {
-        article.style.setProperty('--rotate', '0deg');
+        article.style.setProperty("--rotate", "0deg");
       }
     }
     function handleResize() {
-      spotlightRef.current.style.height = document.documentElement.scrollHeight + 'px';
+      spotlightRef.current.style.height = document.body.scrollHeight + "px";
     }
-    document.addEventListener('mousemove', handleOnMouseMove);
-    document.addEventListener('resize', handleResize);
+    handleResize();
+    document.addEventListener("mousemove", handleOnMouseMove);
+    window.addEventListener("resize", handleResize);
     return () => {
-      document.removeEventListener('mousemove', handleOnMouseMove);
-      document.removeEventListener('resize', handleResize);
+      document.removeEventListener("mousemove", handleOnMouseMove);
+      window.removeEventListener("resize", handleResize);
     };
   }, [spotlightRef.current]);
 
@@ -45,9 +48,6 @@ const Spotlight = () => {
     <div
       ref={spotlightRef}
       className="pointer-events-none absolute inset-0 z-10 transition duration-300"
-      style={{
-        height: document.documentElement.scrollHeight + 'px',
-      }}
     ></div>
   );
 };

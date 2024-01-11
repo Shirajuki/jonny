@@ -1,4 +1,4 @@
-import Card from './Card';
+import Card from "./Card";
 
 type Props = {
   experience: {
@@ -12,8 +12,8 @@ type Props = {
 };
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <Card className="">
-      <div className="text-gray w-3/12 text-left leading-3 text-sm pt-2">
+    <Card className="flex flex-col gap-2 sm:flex-row">
+      <div className="text-gray sm:w-3/12 text-left leading-3 text-sm pt-2">
         <p>{experience.date}</p>
       </div>
       <section className="grid grid-cols-2 text-gray w-full gap-4">
@@ -40,8 +40,11 @@ const ExperienceCard = ({ experience }: Props) => {
             </svg>
           </a>
         </article>
-        <div className="col-span-2" dangerouslySetInnerHTML={{ __html: experience.description }}></div>
-        <p className="col-span-2">{experience.stack.join(' · ')}</p>
+        <div
+          className="col-span-2"
+          dangerouslySetInnerHTML={{ __html: experience.description }}
+        ></div>
+        <p className="col-span-2">{experience.stack.join(" · ")}</p>
       </section>
     </Card>
   );
