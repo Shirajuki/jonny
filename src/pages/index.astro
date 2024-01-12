@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../layouts/Home/Hero";
+import BentoGrid from "../layouts/Home/BentoGrid";
+import Experience from "../layouts/Home/Experience";
+import Projects from "../layouts/Home/Projects";
+---
+
+<Layout title="Jonny Ngo Luong">
+  <main
+    id="home"
+    class="w-full sm:w-[calc(100%-2rem)] overflow-x-hidden sm:overflow-x-visible"
+  >
+    <Hero client:visible />
+    <BentoGrid client:visible />
+    <Experience client:visible />
+    <Projects client:visible />
+  </main>
+</Layout>
+
+<style></style>
