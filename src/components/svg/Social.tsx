@@ -7,15 +7,87 @@ const Social = () => (
     xmlns="http://www.w3.org/2000/svg"
     className="w-full h-full"
   >
-    <rect x="83" y="83" width="52" height="52" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
-    <rect x="83" y="207" width="52" height="52" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
-    <rect x="207" y="207" width="52" height="52" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
-    <rect x="207" y="83" width="52" height="52" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
-    <rect x="21" y="21" width="114" height="114" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
-    <rect x="145" y="21" width="114" height="114" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
-    <rect x="95" y="95" width="40" height="40" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
-    <rect x="21" y="145" width="114" height="114" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
-    <rect x="145" y="145" width="114" height="114" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
+    <rect
+      x="83"
+      y="83"
+      width="52"
+      height="52"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
+    <rect
+      x="83"
+      y="207"
+      width="52"
+      height="52"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
+    <rect
+      x="207"
+      y="207"
+      width="52"
+      height="52"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
+    <rect
+      x="207"
+      y="83"
+      width="52"
+      height="52"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
+    <rect
+      x="21"
+      y="21"
+      width="114"
+      height="114"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
+    <rect
+      x="145"
+      y="21"
+      width="114"
+      height="114"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
+    <rect
+      x="95"
+      y="95"
+      width="40"
+      height="40"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
+    <rect
+      x="21"
+      y="145"
+      width="114"
+      height="114"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
+    <rect
+      x="145"
+      y="145"
+      width="114"
+      height="114"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
     <path
       d="M116.5 109H108.25C107.653 109 107.081 109.237 106.659 109.659C106.237 110.081 106 110.653 106 111.25V121.75C106 122.347 106.237 122.919 106.659 123.341C107.081 123.763 107.653 124 108.25 124H118.75C119.347 124 119.919 123.763 120.341 123.341C120.763 122.919 121 122.347 121 121.75V113.5M110.5 119.5L124 106M124 106H118.75M124 106V111.25"
       stroke="white"
@@ -23,7 +95,15 @@ const Social = () => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <rect x="219" y="95" width="40" height="40" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
+    <rect
+      x="219"
+      y="95"
+      width="40"
+      height="40"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
     <path
       d="M240.5 109H232.25C231.653 109 231.081 109.237 230.659 109.659C230.237 110.081 230 110.653 230 111.25V121.75C230 122.347 230.237 122.919 230.659 123.341C231.081 123.763 231.653 124 232.25 124H242.75C243.347 124 243.919 123.763 244.341 123.341C244.763 122.919 245 122.347 245 121.75V113.5M234.5 119.5L248 106M248 106H242.75M248 106V111.25"
       stroke="white"
@@ -31,7 +111,15 @@ const Social = () => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <rect x="219" y="219" width="40" height="40" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
+    <rect
+      x="219"
+      y="219"
+      width="40"
+      height="40"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
     <path
       d="M240.5 233H232.25C231.653 233 231.081 233.237 230.659 233.659C230.237 234.081 230 234.653 230 235.25V245.75C230 246.347 230.237 246.919 230.659 247.341C231.081 247.763 231.653 248 232.25 248H242.75C243.347 248 243.919 247.763 244.341 247.341C244.763 246.919 245 246.347 245 245.75V237.5M234.5 243.5L248 230M248 230H242.75M248 230V235.25"
       stroke="white"
@@ -39,7 +127,15 @@ const Social = () => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <rect x="95" y="219" width="40" height="40" rx="8" fill="#CFC2E8" fill-opacity="0.15" />
+    <rect
+      x="95"
+      y="219"
+      width="40"
+      height="40"
+      rx="8"
+      fill="#CFC2E8"
+      fillOpacity="0.15"
+    />
     <path
       d="M116.5 233H108.25C107.653 233 107.081 233.237 106.659 233.659C106.237 234.081 106 234.653 106 235.25V245.75C106 246.347 106.237 246.919 106.659 247.341C107.081 247.763 107.653 248 108.25 248H118.75C119.347 248 119.919 247.763 120.341 247.341C120.763 246.919 121 246.347 121 245.75V237.5M110.5 243.5L124 230M124 230H118.75M124 230V235.25"
       stroke="white"
@@ -73,16 +169,36 @@ const Social = () => (
     </g>
     <defs>
       <clipPath id="clip0_826_90">
-        <rect width="62" height="62" fill="white" transform="translate(31 31)" />
+        <rect
+          width="62"
+          height="62"
+          fill="white"
+          transform="translate(31 31)"
+        />
       </clipPath>
       <clipPath id="clip1_826_90">
-        <rect width="62" height="62" fill="white" transform="translate(155 31)" />
+        <rect
+          width="62"
+          height="62"
+          fill="white"
+          transform="translate(155 31)"
+        />
       </clipPath>
       <clipPath id="clip2_826_90">
-        <rect width="62" height="62" fill="white" transform="translate(31 155)" />
+        <rect
+          width="62"
+          height="62"
+          fill="white"
+          transform="translate(31 155)"
+        />
       </clipPath>
       <clipPath id="clip3_826_90">
-        <rect width="62" height="62" fill="white" transform="translate(155 155)" />
+        <rect
+          width="62"
+          height="62"
+          fill="white"
+          transform="translate(155 155)"
+        />
       </clipPath>
     </defs>
   </svg>

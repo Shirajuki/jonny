@@ -5,7 +5,7 @@ import Skills from "../../components/svg/Skills";
 const social = [
   {
     name: "X",
-    url: "https://x.com/shirajuki",
+    url: "https://x.com/shirajukii",
     icon: (className: string) => (
       <svg
         xmlns="http://www.w3.org/2000/svg"

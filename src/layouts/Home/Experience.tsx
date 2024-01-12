@@ -21,7 +21,7 @@ const experiences = [
     href: "https://www.omegapoint.no/",
   },
   {
-    title: "Consultant",
+    title: "Summer internship",
     company: "ITverket",
     date: "JUN - AUG 2022",
     description: `<p>Developed multiple system status dashboards for BOS (Bertel O. Steen) as a solution to ease system status monitoring through the parsing of millions of daily log events in Splunk. Led the UI design for cohesive and visually consistent dashboards.</p>`,

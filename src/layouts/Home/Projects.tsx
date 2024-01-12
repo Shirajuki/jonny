@@ -189,7 +189,7 @@ const Projects = () => {
         ))}
       </article>
 
-      <div className="pt-6">
+      <div className="pt-6 hidden">
         <a
           href="/projects"
           className="inline-flex items-center justify-between gap-3 bg-primary-100 h-8 text-sm rounded-md p-[0.35rem] px-3 hover:brightness-125 hover:scale-105 transition-all duration-500"
