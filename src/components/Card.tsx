@@ -7,7 +7,7 @@ type Props = {
 const Card = ({ children, className = '' }: Props) => {
   return (
     <article
-      className={`group relative flex bg-primary-700 outline outline-primary-500 rounded-lg p-6 transition-transform duration-500 hover:[transform:perspective(1200px)_rotateY(var(--rotate))] ${className}`}
+      className={`group relative flex bg-primary-700 outline outline-primary-500 rounded-lg p-6 transition-transform duration-500 hover:[transform:perspective(2000px)_rotateY(var(--rotate))] ${className}`}
     >
       {children}
 

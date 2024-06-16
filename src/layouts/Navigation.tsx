@@ -12,7 +12,8 @@ const endpoints = [
 
 const Navigation = () => {
   const [toggled, setToggled] = useState(false);
-  const opacity = [useMotionValue(1), useMotionValue(0)];
+  const opacity = useMotionValue(0);
+  const scale = useMotionValue("80%");
 
   const paths = [
     "M3.12109 5.51953V6.96094H20.8789V5.51953H3.12109ZM3.12109 11.2813V12.7188H20.8789V11.2813H3.12109ZM3.12109 17.0391V18.4805H20.8789V17.0391H3.12109Z",
@@ -21,7 +22,8 @@ const Navigation = () => {
 
   const clickHandler = () => {
     setToggled((toggled) => {
-      animate(opacity[0], !toggled ? 0 : 1, {});
+      animate(opacity, toggled ? 0 : 1, { duration: 0.15 });
+      animate(scale, toggled ? "80%" : "100%", {});
       animate([
         [
           "path.top",
@@ -38,13 +40,7 @@ const Navigation = () => {
           { d: !toggled ? "M 3 2.5 L 17 16.346" : "M 2 16.346 L 20 16.346" },
           { at: "<", duration: 0.5, ease: "easeInOut" },
         ],
-        [
-          "nav.nav",
-          { transform: !toggled ? "translateX(0)" : "translateX(140%)" },
-          { at: "-0.1", duration: 0.5, ease: "easeInOut" },
-        ],
       ]);
-
       return !toggled;
     });
   };
@@ -60,7 +56,7 @@ const Navigation = () => {
           damping: 20,
           delay: 2.0,
         }}
-        className="fixed z-50 top-6 backdrop-blur-md left-1/2 text-white items-center py-2 px-12 justify-between w-full max-w-[640px] mx-auto bg-clear rounded-full outline-primary-500 outline !hidden md:!flex"
+        className="fixed z-50 top-6 backdrop-blur-md left-1/2 text-white items-center py-2 px-6 justify-between w-full max-w-[640px] mx-auto bg-clear rounded-full outline-primary-500 outline !hidden md:!flex"
       >
         <a href="/">
           <motion.h1
@@ -85,9 +81,8 @@ const Navigation = () => {
                 endpoint.href.startsWith("#") &&
                 lenis.scrollTo(endpoint.href, { offset: -50, duration: 1 })
               }
-              className={`hover:bg-clear rounded-md p-[0.35rem] px-2 transition-background duration-300 ${
-                !endpoint.href.startsWith("#") ? "bg-clear" : ""
-              }`}
+              className={`hover:bg-clear rounded-md p-[0.35rem] px-2 transition-background duration-300 ${!endpoint.href.startsWith("#") ? "bg-clear" : ""
+                }`}
             >
               {endpoint.site}
             </motion.a>
@@ -108,7 +103,9 @@ const Navigation = () => {
       >
         <MenuToggle toggle={clickHandler}></MenuToggle>
 
-        <nav className="fixed flex flex-col gap-3 text-sm backdrop-blur-md left-1/2 min-w-[50%] text-white items-center py-2 px-12 justify-between mx-auto bg-clear rounded-md outline-primary-500 outline translate-x-[140%] nav">
+        <motion.nav
+          style={{ scale, opacity }}
+          className="fixed flex flex-col gap-3 text-sm backdrop-blur-md left-12 min-w-[90%] text-white py-3 px-6 justify-between items-start mx-auto bg-clear rounded-md outline-primary-500 outline nav">
           {endpoints.map((endpoint) => (
             <motion.a
               key={endpoint.site}
@@ -116,19 +113,23 @@ const Navigation = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 500, damping: 20 }}
-              onClick={() =>
-                endpoint.href.startsWith("#") &&
-                lenis.scrollTo(endpoint.href, { offset: -50, duration: 1 })
-              }
-              className={`hover:bg-clear rounded-md p-[0.35rem] px-2 transition-background duration-300 ${
-                !endpoint.href.startsWith("#") ? "bg-clear" : ""
-              }`}
+              onClick={() => {
+                clickHandler();
+                if (endpoint.href.startsWith("#"))
+                  lenis.scrollTo(endpoint.href, { offset: -50, duration: 1 });
+              }}
+              className={`hover:bg-clear rounded-md p-[0.35rem] px-2 transition-background text-left duration-300 ${!endpoint.href.startsWith("#") ? "bg-clear" : ""
+                }`}
             >
               {endpoint.site}
             </motion.a>
           ))}
-        </nav>
+        </motion.nav>
       </motion.header>
+
+      <div
+        className={`fixed w-screen h-screen z-[49] pointer-events-none transition-all ${toggled ? "bg-black/80 backdrop-blur-sm" : "backdrop-blur-none"}`}
+      ></div>
     </>
   );
 };
