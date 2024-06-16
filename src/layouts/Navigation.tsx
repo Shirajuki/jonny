@@ -1,4 +1,4 @@
-import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import { animate, motion, useMotionValue, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import Logo from "../components/svg/Logo";
 import { useEffect, useRef, useState } from "react";
 import MenuToggle from "../components/MenuToggle";
@@ -11,14 +11,25 @@ const endpoints = [
 ];
 
 const Navigation = () => {
+  const opacityP = useMotionValue(0);
+  const y = useMotionValue(0);
+  const [prev, setPrev] = useState(0);
+
   const [toggled, setToggled] = useState(false);
+  const { scrollY } = useScroll();
   const opacity = useMotionValue(0);
   const scale = useMotionValue("80%");
 
-  const paths = [
-    "M3.12109 5.51953V6.96094H20.8789V5.51953H3.12109ZM3.12109 11.2813V12.7188H20.8789V11.2813H3.12109ZM3.12109 17.0391V18.4805H20.8789V17.0391H3.12109Z",
-    "M6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L10.5858 12L5.29289 17.2929C4.90237 17.6834 4.90237 18.3166 5.29289 18.7071C5.68342 19.0976 6.31658 19.0976 6.70711 18.7071L12 13.4142L17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L13.4142 12L18.7071 6.70711C19.0976 6.31658 19.0976 5.68342 18.7071 5.29289C18.3166 4.90237 17.6834 4.90237 17.2929 5.29289L12 10.5858L6.70711 5.29289Z",
-  ];
+  useMotionValueEvent(scrollY, "change", (latest: number) => {
+    if (latest < prev) {
+      animate(opacityP, 1, { duration: 0.25 });
+      animate(y, 0, { duration: 0.15 });
+    } else if (latest > 100 && latest > prev) {
+      animate(opacityP, 0, { duration: 0.25 });
+      animate(y, -120, { duration: 0.15 });
+    }
+    setPrev(latest);
+  });
 
   const clickHandler = () => {
     setToggled((toggled) => {
@@ -48,15 +59,16 @@ const Navigation = () => {
   return (
     <>
       <motion.header
-        initial={{ scale: 1, translateX: "-50%", translateY: "-200%" }}
+        initial={{ scale: 1, translateX: "-50%", translateY: "-200%", opacity: 1 }}
         animate={{ scale: 1, translateY: "0" }}
+        style={{ opacity: opacityP, y }}
         transition={{
           type: "spring",
           stiffness: 260,
           damping: 20,
           delay: 2.0,
         }}
-        className="fixed z-50 top-6 backdrop-blur-md left-1/2 text-white items-center py-2 px-6 justify-between w-full max-w-[640px] mx-auto bg-clear rounded-full outline-primary-500 outline !hidden md:!flex"
+        className="fixed z-50 top-6 backdrop-blur-md left-1/2 text-white items-center py-2 px-6 justify-between w-full max-w-[580px] mx-auto bg-clear rounded-full outline-primary-500 outline !hidden md:!flex"
       >
         <a href="/">
           <motion.h1
