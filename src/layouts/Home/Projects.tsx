@@ -35,7 +35,7 @@ const projects = [
       alt: "Anki-redesign",
     },
     description:
-      "A theming add-on, developed with Python 3 and Qt5, enhancing the popular spaced repetition-based flipcard application, Anki. This add-on addresses the outdated interface and poor user experience prevalent in the older version, and aims to make the application more enjoyable for users, thereby aiding their studies. With 67k downloads, it has significantly contributed to improving the user experience of many.",
+      "A theming add-on, developed with Python 3 and Qt5, enhancing the popular spaced repetition-based flipcard application, Anki. This add-on addresses the outdated interface and poor user experience prevalent in the older version, and aims to make the application more enjoyable for users, thereby aiding their studies. With 78k+ downloads, it has significantly contributed to improving the user experience of many.",
     stack: ["Qt5", "Python 3"],
     links: [
       { type: "demo", href: "https://ankiweb.net/shared/info/308574457" },
@@ -80,21 +80,21 @@ const smallProjects = [
       },
     ],
   },
-  {
-    title: "Jukirecipes",
-    image: {
-      src: "/projects/jukirecipes.jpg",
-      alt: "Jukirecipes",
-    },
-    links: [
-      { type: "demo", href: "https://shirajuki.js.org/jukirecipes/" },
-      { type: "github", href: "https://github.com/Shirajuki/jukirecipes" },
-      {
-        type: "figma",
-        href: "https://www.figma.com/file/ptIEWo50Ftxj3I791KzNSA/Jukirecipes?node-id=0%3A1",
-      },
-    ],
-  },
+  // {
+  //   title: "Jukirecipes",
+  //   image: {
+  //     src: "/projects/jukirecipes.jpg",
+  //     alt: "Jukirecipes",
+  //   },
+  //   links: [
+  //     { type: "demo", href: "https://shirajuki.js.org/jukirecipes/" },
+  //     { type: "github", href: "https://github.com/Shirajuki/jukirecipes" },
+  //     {
+  //       type: "figma",
+  //       href: "https://www.figma.com/file/ptIEWo50Ftxj3I791KzNSA/Jukirecipes?node-id=0%3A1",
+  //     },
+  //   ],
+  // },
   {
     title: "NTNUi Taekwondo",
     image: {
@@ -112,6 +112,23 @@ const smallProjects = [
     links: [
       { type: "demo", href: "https://shirajuki.js.org/digital-descent/" },
       { type: "github", href: "https://github.com/Shirajuki/digital-descent" },
+    ],
+  },
+  {
+    title: "JS rendering benchmark",
+    image: {
+      src: "/projects/js-rendering-benchmark.jpg",
+      alt: "JavaScript Game Rendering Benchmark",
+    },
+    links: [
+      {
+        type: "demo",
+        href: "https://shirajuki.js.org/js-game-rendering-benchmark/",
+      },
+      {
+        type: "github",
+        href: "https://github.com/Shirajuki/js-game-rendering-benchmark",
+      },
     ],
   },
   {
@@ -134,23 +151,6 @@ const smallProjects = [
     links: [
       { type: "demo", href: "https://shirajuki.js.org/aqua/" },
       { type: "github", href: "https://github.com/Shirajuki/aqua" },
-    ],
-  },
-  {
-    title: "JS rendering benchmark",
-    image: {
-      src: "/projects/js-rendering-benchmark.jpg",
-      alt: "JavaScript Game Rendering Benchmark",
-    },
-    links: [
-      {
-        type: "demo",
-        href: "https://shirajuki.js.org/js-game-rendering-benchmark/",
-      },
-      {
-        type: "github",
-        href: "https://github.com/Shirajuki/js-game-rendering-benchmark",
-      },
     ],
   },
 ];
@@ -203,6 +203,7 @@ const Projects = () => {
             stroke="currentColor"
             className="w-4 h-4"
           >
+            <title>arrow right</title>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"

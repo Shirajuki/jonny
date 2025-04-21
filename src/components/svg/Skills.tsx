@@ -8,6 +8,7 @@ const Skills = () => {
       xmlns="http://www.w3.org/2000/svg"
       className="w-full h-full"
     >
+      <title>skills</title>
       <rect
         x="21"
         y="21"

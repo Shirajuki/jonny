@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 const findFirstParentArticle = (
-  element: HTMLElement | null
+  element: HTMLElement | null,
 ): HTMLElement | null => {
   if (element?.tagName === "BODY" || element === null) return null;
   if (element?.tagName === "ARTICLE") return element;
@@ -9,7 +9,7 @@ const findFirstParentArticle = (
 };
 
 const Spotlight = () => {
-  const spotlightRef: any = useRef<HTMLDivElement>(null);
+  const spotlightRef = useRef<HTMLDivElement>(null);
 
   // Mouse cursor
   useEffect(() => {
@@ -22,8 +22,8 @@ const Spotlight = () => {
       const rect = article.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      article.style.setProperty("--x", x + "px");
-      article.style.setProperty("--y", y + "px");
+      article.style.setProperty("--x", `${x}px`);
+      article.style.setProperty("--y", `${y}px`);
       if (x > rect.width - rect.width / 4) {
         article.style.setProperty("--rotate", "5deg");
       } else if (x < rect.width / 4) {
@@ -33,7 +33,7 @@ const Spotlight = () => {
       }
     }
     function handleResize() {
-      spotlightRef.current.style.height = document.body.scrollHeight + "px";
+      spotlightRef.current.style.height = `${document.body.scrollHeight}px`;
     }
     handleResize();
     document.addEventListener("mousemove", handleOnMouseMove);
@@ -42,13 +42,13 @@ const Spotlight = () => {
       document.removeEventListener("mousemove", handleOnMouseMove);
       window.removeEventListener("resize", handleResize);
     };
-  }, [spotlightRef.current]);
+  }, []);
 
   return (
     <div
       ref={spotlightRef}
       className="pointer-events-none absolute inset-0 z-10 transition duration-300"
-    ></div>
+    />
   );
 };
 export default Spotlight;

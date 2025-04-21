@@ -5,8 +5,8 @@ const Footer = () => {
         Loosely designed in Figma by Jonny Ngo Luong. Built with Astro.js and
         Tailwind CSS
       </p>
-      <a
-        href="#home"
+      <button
+        type="button"
         onClick={() => lenis.scrollTo("#home", { duration: 1 })}
         className="flex items-center justify-between gap-3 bg-primary-100 h-8 text-sm rounded-md p-[0.35rem] px-3 hover:brightness-125 hover:scale-105 transition-all duration-500"
       >
@@ -19,13 +19,14 @@ const Footer = () => {
           stroke="currentColor"
           className="w-4 h-4"
         >
+          <title>arrow up</title>
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
             d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"
           />
         </svg>
-      </a>
+      </button>
     </footer>
   );
 };

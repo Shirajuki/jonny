@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 
-export const MenuToggle = ({ toggle }: any) => (
+type Props = {
+  toggle: () => void;
+};
+export const MenuToggle = ({ toggle }: Props) => (
   <motion.button
     onClick={toggle}
     className="relative w-12 h-12 z-10 bg-primary-600 display flex justify-center items-center rounded-full outline-none focus:outline-none"
@@ -14,6 +17,7 @@ export const MenuToggle = ({ toggle }: any) => (
       viewBox="0 0 23 18"
       className="w-6 h-6 fill-transparent stroke-white translate-x-[1px]"
     >
+      <title>menu</title>
       <motion.path
         d="M 2 2.5 L 20 2.5"
         className="top"
@@ -23,14 +27,14 @@ export const MenuToggle = ({ toggle }: any) => (
         }}
         strokeWidth="3"
         strokeLinecap="round"
-      ></motion.path>
+      />
       <motion.path
         d="M 2 9.423 L 20 9.423"
         opacity="1"
         className="middle"
         strokeWidth="3"
         strokeLinecap="round"
-      ></motion.path>
+      />
       <motion.path
         d="M 2 16.346 L 20 16.346"
         className="bottom"
@@ -40,7 +44,7 @@ export const MenuToggle = ({ toggle }: any) => (
         }}
         strokeWidth="3"
         strokeLinecap="round"
-      ></motion.path>
+      />
     </svg>
   </motion.button>
 );

@@ -7,6 +7,7 @@ const Social = () => (
     xmlns="http://www.w3.org/2000/svg"
     className="w-full h-full"
   >
+    <title>social</title>
     <rect
       x="83"
       y="83"

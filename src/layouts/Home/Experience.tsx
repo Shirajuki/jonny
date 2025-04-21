@@ -24,7 +24,8 @@ const experiences = [
     title: "Summer internship",
     company: "ITverket",
     date: "JUN - AUG 2022",
-    description: `<p>Developed multiple system status dashboards for BOS (Bertel O. Steen) as a solution to ease system status monitoring through the parsing of millions of daily log events in Splunk. Led the UI design for cohesive and visually consistent dashboards.</p>`,
+    description:
+      "<p>Developed multiple system status dashboards for BOS (Bertel O. Steen) as a solution to ease system status monitoring through the parsing of millions of daily log events in Splunk. Led the UI design for cohesive and visually consistent dashboards.</p>",
     stack: ["Splunk", "Figma", "Docker", ".NET", "JavaScript", "Python"],
     href: "https://www.omegapoint.no/",
   },
@@ -32,7 +33,8 @@ const experiences = [
     title: "Front-End Developer",
     company: "NTNUI Dans",
     date: "JAN - MAY 2021",
-    description: `<p>Designed and developed a web-based management system for the new NTNUi Dans website, dedicated to course and registration management. Executed as part of IT2901 - Informatics Project II. Led the UX/UI design and implementation for a visually unified and user-friendly website.</p>`,
+    description:
+      "<p>Designed and developed a web-based management system for the new NTNUi Dans website, dedicated to course and registration management. Executed as part of IT2901 - Informatics Project II. Led the UX/UI design and implementation for a visually unified and user-friendly website.</p>",
     stack: [
       "React",
       "TypeScript",
@@ -83,6 +85,7 @@ const Experience = () => {
             stroke="currentColor"
             className="w-4 h-4"
           >
+            <title>arrow right</title>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"

@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../layouts/Home/Hero";
 import BentoGrid from "../layouts/Home/BentoGrid";
 import Experience from "../layouts/Home/Experience";
 import Projects from "../layouts/Home/Projects";
+import { HeroLottieWrapper } from "../components/HeroLottieWrapper";
+import { HeroLottie } from "../components/HeroLottie";
 ---
 
 <Layout title="Jonny Ngo Luong">
@@ -11,7 +12,10 @@ import Projects from "../layouts/Home/Projects";
     id="home"
     class="w-full sm:w-[calc(100%-2rem)] overflow-x-hidden sm:overflow-x-visible"
   >
-    <Hero client:visible />
+    <div class="h-screen">
+      <HeroLottieWrapper client:load />
+      <HeroLottie client:only />
+    </div>
     <BentoGrid client:visible />
     <Experience client:load />
     <Projects client:load />
