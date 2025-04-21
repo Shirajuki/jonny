@@ -3,7 +3,7 @@ import ScrollingHeading from "../../components/ScrollingHeading";
 
 const experiences = [
   {
-    title: "Consultant",
+    title: "Security Advocate & Consultant",
     company: "Omegapoint Norge",
     date: "SEP 2023 - PRESENT",
     description: `<p>Led and managed crucial projects in a short period of time. Enhanced the company's website with styling, UI updates, migration to new versions, and essential accessibility improvements. Directed both internal and external cybersecurity Capture the Flag events and engagements, overseeing planning, infrastructure setup, challenge development, and Azure cloud operations, engaging hundreds of participants across both these endeavors.</p>`,

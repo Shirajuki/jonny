@@ -87,7 +87,7 @@ const BentoGrid = () => {
     <article id="content">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
         {/* About me + Cybersecurity + digital garden */}
-        <Card className="flex-col col-span-2 gap-3 hover:[transform:perspective(1200px)_rotateY(5deg)]">
+        <Card className="flex-col col-span-3 md:col-span-2 gap-3 hover:[transform:perspective(1200px)_rotateY(5deg)]">
           <p className="bg-clear backdrop-blur-md rounded-lg p-4 h-full">
             Heyo! I'm Jonny, a fullstack software developer and CTF player from
             Lillehammer, Norway. I work with modern web and mobile technologies.
@@ -124,7 +124,7 @@ const BentoGrid = () => {
         </Card>
 
         {/* Social medias */}
-        <Card className="!block col-span-2 sm:col-span-1">
+        <Card className="!block col-span-3 md:col-span-1 min-h-[200px]">
           <div className="grid grid-cols-2 gap-3 h-full min-h-[200px] sm:min-h-[auto]">
             {social.map((link, i) => (
               <div
@@ -145,8 +145,11 @@ const BentoGrid = () => {
         </Card>
 
         {/* Skills */}
-        <Card className="!flex col-span-3 !p-2 justify-center items-center">
+        <Card className="!hidden col-span-3 !p-2 justify-center items-center md:!flex">
           <Skills2 />
+        </Card>
+        <Card className="!flex col-span-3 !p-2 justify-center items-center md:!hidden">
+          <Skills />
         </Card>
       </div>
     </article>
