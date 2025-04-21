@@ -1,1 +1,0 @@
-import{r as e}from"./index.068npczX.js";import{b as u,M as a,A as r}from"./motion.8qeVckjW.js";function c(t){const o=u(()=>r(t)),{isStatic:s}=e.useContext(a);if(s){const[,n]=e.useState(t);e.useEffect(()=>o.on("change",n),[])}return o}function m(t,o,s){e.useInsertionEffect(()=>t.on(o,s),[t,o,s])}export{m as a,c as u};
