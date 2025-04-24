@@ -29,22 +29,6 @@ const experiences = [
     stack: ["Splunk", "Figma", "Docker", ".NET", "JavaScript", "Python"],
     href: "https://www.omegapoint.no/",
   },
-  {
-    title: "Front-End Developer",
-    company: "NTNUI Dans",
-    date: "JAN - MAY 2021",
-    description:
-      "<p>Designed and developed a web-based management system for the new NTNUi Dans website, dedicated to course and registration management. Executed as part of IT2901 - Informatics Project II. Led the UX/UI design and implementation for a visually unified and user-friendly website.</p>",
-    stack: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Firebase",
-      "Express",
-      "Cypress",
-    ],
-    href: "https://ntnuidans.no/",
-  },
 ];
 
 const Experience = () => {

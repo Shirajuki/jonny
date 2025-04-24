@@ -47,7 +47,7 @@ export const HeroLottie = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0 pt-4">
+    <div className="absolute inset-0 z-0 pt-4 h-screen">
       <motion.section
         className="py-14 text-center h-screen flex justify-center items-center"
         variants={container}
